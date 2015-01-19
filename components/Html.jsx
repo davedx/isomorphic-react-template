@@ -12,6 +12,7 @@ render: function() {
         <link rel="stylesheet" href="/css/main.css" />
         <script src="/js/lib.js"></script>
         <script src="/js/main.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
       </head>
       <body dangerouslySetInnerHTML={{__html: this.props.markup}}></body>
       </html>

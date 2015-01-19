@@ -10,13 +10,17 @@ var NotFoundRoute = Router.NotFoundRoute;
 var App      = require('./components/App.jsx');
 var Index    = require('./components/Index.jsx');
 var Place    = require('./components/Place.jsx');
+var Category = require('./components/Category.jsx');
+var Product  = require('./components/Product.jsx');
 var NotFound = require('./components/NotFound.jsx');
 
 var routes = (
   <Route name="places" path="/" handler={App}>
     <DefaultRoute name="index" handler={Index} />
     <Route name="place" path="place/:id" handler={Place} />
-    <NotFoundRoute name="notfound" handler={ NotFound }/>
+    <Route name="category" path="category/:id" handler={Category} />
+    <Route name="product" path="product/:id" handler={Product} />
+    <NotFoundRoute name="notfound" handler={NotFound} />
   </Route>
 );
 

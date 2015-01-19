@@ -33,7 +33,7 @@ var App = React.createClass({
             <Link to="index"><small>(back to index)</small></Link>
           </ul>
           <div className="detail">
-            <RouteHandler />
+            <RouteHandler data={this.props.data} />
           </div>
         </div>
       </DocumentTitle>
