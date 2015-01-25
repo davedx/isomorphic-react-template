@@ -30,7 +30,9 @@ var App = React.createClass({
           <h1>{ title }</h1>
           <ul className="master">
             { links }
-            <Link to="index"><small>(back to index)</small></Link>
+            <li><Link to="product" params={{id: 1}}>Product 1</Link></li>
+            <li><Link to="product" params={{id: 2}}>Product 2</Link></li>
+            <li><Link to="index"><small>(back to index)</small></Link></li>
           </ul>
           <div className="detail">
             <RouteHandler data={this.props.data} />

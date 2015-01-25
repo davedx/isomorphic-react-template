@@ -15,7 +15,7 @@ module.exports = function (req, res, next) {
 
 		resolveHash(resources.load(state.routes, state.params)).then(function(data) {
 			var markup = React.renderToString(<Handler data={data} />);
-			var html   = React.renderToStaticMarkup(<Html title={title} markup={markup} />);
+			var html   = React.renderToStaticMarkup(<Html title={title} markup={markup} pageData={data} />);
 			res.send('<!DOCTYPE html>' + html);
 		});
 	});
